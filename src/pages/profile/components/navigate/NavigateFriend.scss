@@ -1,0 +1,41 @@
+@import "../../../../assets/style/variable";
+
+.navigate-friend {
+    &-container {
+        font-family: "Segoe UI";
+        padding: 12px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-search {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        width: 200px;
+        background: $bg-color;
+        border-radius: 100rem;
+
+        &-icon {
+            height: 16px;
+            font-size: 16px;
+            padding: 0 12px;
+            fill: #575f68;
+        }
+
+        &-input {
+            height: 100%;
+            width: 70%;
+            font-size: 15px;
+            color: #303847;
+            background: transparent;
+            border-radius: 6px;
+            border: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

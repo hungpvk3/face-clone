@@ -1,0 +1,36 @@
+.profile-group {
+    &-react {
+        margin: 3px 0;
+        display: flex;
+        align-items: center;
+        gap: 0 12px;
+    }
+
+    &-item {
+        padding: 14px 16px;
+        font-size: 16px;
+        font-weight: 600;
+        color: inherit;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(238, 237, 237);
+            border-radius: 6px;
+        }
+
+        &-active {
+            color: rgb(82, 82, 245);
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-color: rgb(82, 82, 245);
+                width: 100%;
+                height: 3px;
+                bottom: -3px;
+                left: 0;
+            }
+        }
+    }
+}

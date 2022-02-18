@@ -1,0 +1,51 @@
+.stories-item {
+    &-main {
+        position: relative;
+        height: 198px;
+        background: rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-family: "Segoe UI";
+        cursor: pointer;
+    }
+
+    &-story {
+        height: 100%;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:hover img {
+            transform: scale(1.06);
+        }
+    }
+
+    &-info {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 10px;
+    }
+
+    &-name {
+        position: absolute;
+        width: 96%;
+        // z-index: 2;
+        color: #fff;
+        left: 4px;
+        bottom: 8px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+}
+
+.storiesActive {
+    height: 26rem;
+}

@@ -1,0 +1,115 @@
+@import "../../assets/style/variable";
+
+.home {
+    &-wrapper {
+        width: 100%;
+        background-color: $bg-color;
+        padding-top: 56px;
+        display: flex;
+    }
+
+    &-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-navigate {
+        background-color: $bg-color;
+        flex-basis: 23%;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 56px;
+        height: calc(100vh - 56px);
+        overflow-y: scroll;
+    }
+
+    &-main {
+        width: 100%;
+        background-color: $bg-color;
+        flex-basis: 54%;
+        padding: 0 6%;
+        margin-top: 28px;
+    }
+
+    &-stories {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0 6px;
+    }
+
+    &-posts {
+        margin-top: 12px;
+    }
+
+    &-contact {
+        background-color: $bg-color;
+        flex-basis: 23%;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 56px;
+        height: calc(100vh - 56px);
+        overflow-y: scroll;
+    }
+
+    &-public-create {
+        margin: 12px 0px;
+    }
+}
+
+.arow-right:hover .see-all {
+    display: block;
+}
+
+.see-all {
+    display: none;
+}
+
+.navigation::-webkit-scrollbar {
+    width: 8px;
+}
+.navigation::-webkit-scrollbar-track {
+    background: transparent;
+}
+.navigation::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 100rem;
+}
+.navigation:hover::-webkit-scrollbar-thumb {
+    background: #ccc;
+}
+
+@media (max-width: 912px) {
+    .home {
+        &-navigate {
+            display: none;
+        }
+
+        &-contact {
+            flex-basis: 32%;
+        }
+
+        &-main {
+            flex-basis: 68%;
+            padding: 0 4%;
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .home {
+        &-navigate {
+            display: none;
+        }
+
+        &-contact {
+            display: none;
+        }
+
+        &-main {
+            flex-basis: 100%;
+            padding: 0 6%;
+        }
+    }
+}

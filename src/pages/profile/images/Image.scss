@@ -1,0 +1,15 @@
+.profile-image {
+    &-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+    }
+
+    &-list {
+        width: 100%;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}

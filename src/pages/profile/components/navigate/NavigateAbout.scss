@@ -1,0 +1,35 @@
+@import "../../../../assets/style/variable";
+
+.navigate-about {
+    &-container {
+        font-family: inherit;
+        padding: 12px 0;
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        transform: translateX(-10px);
+    }
+
+    &-item {
+        padding: 8px 10px;
+        border-radius: 8px;
+        color: $heading-color;
+        font-weight: 500;
+
+        &:hover {
+            background: rgb(245, 240, 240);
+            color: $heading-color;
+        }
+
+        &-active {
+            padding: 8px 10px;
+            border-radius: 8px;
+            color: $blue-color;
+            font-weight: 500;
+            background: rgb(245, 240, 240);
+        }
+    }
+}

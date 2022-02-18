@@ -1,0 +1,11 @@
+.profile-about {
+    &-navigate {
+        flex-basis: 28%;
+        border-right: 1px solid rgb(165, 158, 158);
+    }
+
+    &-main {
+        flex-basis: 72%;
+        padding: 12px 6px;
+    }
+}

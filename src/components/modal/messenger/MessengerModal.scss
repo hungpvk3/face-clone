@@ -1,0 +1,32 @@
+$bg-color: #f0f2f5;
+
+.messenger-modal {
+    &-searchs {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        width: 100%;
+        background: $bg-color;
+        border-radius: 100rem;
+    }
+
+    &-icon {
+        height: 16px;
+        font-size: 16px;
+        padding: 0 12px;
+        fill: #575f68;
+    }
+
+    &-search {
+        height: 36px;
+        font-size: 15px;
+        color: #303847;
+        background: transparent;
+        border-radius: 6px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

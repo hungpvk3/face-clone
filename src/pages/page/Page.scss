@@ -1,0 +1,26 @@
+@import "../../assets/style/variable";
+
+.page-video {
+    &-main {
+        max-width: 1092px;
+        padding: 0 16px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    &-wrapper {
+        width: 100%;
+        max-width: 892px;
+    }
+
+    &-container {
+        padding: 16px;
+        border-radius: 8px;
+        font-family: $font;
+    }
+
+    &-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
