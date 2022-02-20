@@ -1,0 +1,85 @@
+@import "../../../assets/style/variable";
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-group {
+    &-container {
+        padding: 12px 16px;
+        background-color: #f8faff;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgb(0 0 0 / 10%);
+        font-family: $font;
+    }
+
+    &-something {
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 100rem;
+        }
+
+        &-button {
+            background: #f0f2f5;
+            width: 100%;
+            border-radius: 100rem;
+            padding: 10px;
+            cursor: pointer;
+            color: #595d66;
+            font-size: 16px;
+
+            &:hover {
+                background: #e8eaec;
+            }
+        }
+    }
+
+    &-enmoje {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+
+        &-item {
+            @include center;
+            gap: 0 8px;
+            width: 100%;
+            padding: 8px 0;
+            border-radius: 6px;
+            cursor: pointer;
+
+            svg {
+                font-size: 24px;
+                fill: rgb(19, 180, 19);
+            }
+
+            span {
+                color: $text-color;
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            &:hover {
+                background: #f0f2f5;
+            }
+
+            &:nth-child(2) {
+                svg {
+                    fill: rgb(204, 190, 0);
+                }
+            }
+        }
+    }
+
+    &-line {
+        border-bottom: 1px solid #d6d1d1;
+        margin: 12px 0;
+    }
+}

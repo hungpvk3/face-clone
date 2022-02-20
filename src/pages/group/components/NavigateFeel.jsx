@@ -1,9 +1,10 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 import { Setting, Plus } from "../../../components/icons";
 import image from '../../../assets/img/stories1.jpg'
 
-const NavigateMain = () => {
+const NavigateFeel = () => {
     return (
         <div className="">
             <div className="flex justify-between items-center px-4 mt-4">
@@ -22,9 +23,9 @@ const NavigateMain = () => {
                 </h2>
             </div>
 
-            <div className="flex items-center justify-center gap-3 p-2 bg-blue-50 rounded-md mt-4 mx-2 cursor-pointer hover:bg-blue-100">
+            <Link to="/groups/create" className="flex items-center justify-center gap-3 p-2 bg-blue-50 rounded-md mt-4 mx-2 cursor-pointer hover:bg-blue-100">
                 <Plus css="h-5 w-5 text-blue-500" /><span style={{fontSize: '16px', fontWeight: 500}} className="text-blue-500">Tạo nhóm  mới</span>
-            </div>
+            </Link>
 
             <div className="bg-gray-500 mt-2 my-3 mx-auto" style={{height: '0.5px', width: 'calc(100% - 16px)'}}></div>
 
@@ -73,4 +74,4 @@ const NavigateMain = () => {
     );
 };
 
-export default NavigateMain;
+export default NavigateFeel;

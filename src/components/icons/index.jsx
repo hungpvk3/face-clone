@@ -28,3 +28,4 @@ export { default as Pause } from "./Pause";
 export { default as VolumMax } from "./VolumMax";
 export { default as MiniPlay } from "./MiniPlay";
 export { default as Flow } from "./Flow";
+export { default as Lock } from './Lock'

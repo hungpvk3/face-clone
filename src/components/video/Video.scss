@@ -54,7 +54,7 @@
     }
 
     &-volumn {
-        display: none;
+        opacity: 0;
         position: absolute;
         transform: rotate(-90deg);
         outline: none;
@@ -66,7 +66,6 @@
         &::-webkit-slider-runnable-track {
             height: 5px;
             border-radius: 3px;
-            border: 1px solid transparent;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
         }
@@ -74,15 +73,19 @@
             border-radius: 100%;
             height: 18px;
             width: 18px;
-            margin-top: -6.7px;
+            margin-top: -6px;
+        }
+
+        &:hover {
+            opacity: 1;
         }
     }
 
     &-icon:hover &-volumn {
-        display: block;
+        opacity: 1;
     }
 
     &-controll {
-        // display: none;
+        display: none;
     }
 }

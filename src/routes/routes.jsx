@@ -8,6 +8,7 @@ import GroupPage from "../pages/group";
 
 import Feel from "../pages/group/feel";
 import Group from '../pages/group/main'
+import CreateGroupPage from "../pages/group/create";
 
 import ProfilePage from "../pages/profile";
 import MainFrofile from "../pages/profile/main";
@@ -91,21 +92,6 @@ export default function MainRoutes() {
                         },
                     ],
                 },
-                
-                {
-                    path: "stories",
-                    element: <MainStories />,
-                    children: [
-                        {
-                            path: "",
-                            element: <ListStories />,
-                        },
-                        {
-                            path: "my",
-                            element: <CreateStories />,
-                        },
-                    ],
-                },
                 {
                     path: "groups",
                     element: <GroupPage />,
@@ -115,11 +101,29 @@ export default function MainRoutes() {
                             element: <Feel />,
                         },
                         {
+                            path: 'create',
+                            element: <CreateGroupPage />
+                        },
+                        {
                             path: ":groups",
                             element: <Group />,
                         }
                     ]
                 }
+            ],
+        },
+        {
+            path: "/stories",
+            element: <MainStories />,
+            children: [
+                {
+                    path: "",
+                    element: <ListStories />,
+                },
+                {
+                    path: "my",
+                    element: <CreateStories />,
+                },
             ],
         },
         {
