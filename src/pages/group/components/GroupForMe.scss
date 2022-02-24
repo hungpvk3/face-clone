@@ -1,0 +1,13 @@
+// .group-for-me {
+//     &-container {
+
+//     }
+// }
+
+@media (max-width: 768px) {
+    .group-for-me {
+        &-container {
+            // width: 100%;
+        }
+    }
+}

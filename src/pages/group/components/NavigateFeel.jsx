@@ -29,20 +29,20 @@ const NavigateFeel = () => {
 
             <div className="bg-gray-500 mt-2 my-3 mx-auto" style={{height: '0.5px', width: 'calc(100% - 16px)'}}></div>
 
-            <div className="mx-2 w-full">
+            <div className="px-2 w-full">
                 <h2 className="text-lg font-semibold mb-4">Nhóm  do  bạn  quản  lý</h2>
 
                 <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
-                            <img src={image} alt="" classNamee="h-full w-full object-cover" />
+                            <img src={image} alt="" className="h-full w-full object-cover" />
                         </div>
                         <p className="text-base font-medium">Hội đồng  phê  Việt Nam</p>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
-                            <img src={image} alt="" classNamee="h-full w-full object-cover" />
+                            <img src={image} alt="" className="h-full w-full object-cover" />
                         </div>
                         <p className="text-base font-medium">Hội đồng  phê  Việt Nam</p>
                     </div>
@@ -51,20 +51,20 @@ const NavigateFeel = () => {
 
             <div className="bg-gray-500 mt-2 my-3 mx-auto" style={{height: '0.5px', width: 'calc(100% - 16px)'}}></div>
 
-            <div className="mx-2 w-full">
+            <div className="px-2 w-full">
                 <h2 className="text-lg font-semibold mb-4">Nhóm  bạn đã tham gia</h2>
 
                 <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
-                            <img src={image} alt="" classNamee="h-full w-full object-cover" />
+                            <img src={image} alt="" className="h-full w-full object-cover" />
                         </div>
                         <p className="text-base font-medium">Hội đồng  phê  Việt Nam</p>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
-                            <img src={image} alt="" classNamee="h-full w-full object-cover" />
+                            <img src={image} alt="" className="h-full w-full object-cover" />
                         </div>
                         <p className="text-base font-medium">Hội đồng  phê  Việt Nam</p>
                     </div>

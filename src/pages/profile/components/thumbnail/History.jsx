@@ -4,7 +4,7 @@ import { Input } from "antd";
 const { TextArea } = Input;
 const History = ({ onClose }) => {
     return (
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center pt-2">
             <TextArea
                 placeholder="Mô tả về bạn"
                 bordered

@@ -14,12 +14,17 @@ const Feel = () => {
         <NavigateFeel />
       </BaseNavigte>
 
-      <div className="pt-16 group-feel">
-        <div className="">
+      <div className="pt-16 group-feel-main">
+        <div className="group-feel-post">
           <Video />
           <Post imgPost={'https://thuthuatnhanh.com/wp-content/uploads/2019/04/anh-cute.jpg'} />
         </div>
-        <GroupForMe />
+        <div className="group-feel-groups">
+          <GroupForMe />
+        </div>
+        <div className="group-feel-button">
+          Xem them nhom
+        </div>
       </div>
     </div>
   )

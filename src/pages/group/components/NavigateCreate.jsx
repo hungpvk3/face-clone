@@ -4,17 +4,16 @@ import {Input} from 'antd'
 import { Lock, Global, Arow } from "../../../components/icons";
 import image from '../../../assets/img/stories1.jpg';
 
-const NavigateCreate = () => {
+const NavigateCreate = ({ruleValue, onChangeRuleValue, onChangeName}) => {
     const ruleRef = useRef();
     const [rule, setRule] = useState(false);
-    const [ruleValue, setRuleValue] = useState('');
 
     const handleChangeRule = () => {
         setRule(!rule)
     }
 
     const handleChangeRuleValue = (value) => {
-        setRuleValue(value)
+        onChangeRuleValue(value)
         setRule(false)
     }
 
@@ -53,7 +52,7 @@ const NavigateCreate = () => {
             </div>
             
             <div className="">
-                <Input placeholder="Ten nhom" style={{height: '50px', borderRadius: '6px'}} />
+                <Input placeholder="Ten nhom" style={{height: '50px', borderRadius: '6px'}} onChange={onChangeName} />
 
                 <div className="relative border px-3 mt-4 justify-between hover:border-blue-400 cursor-pointer" style={{height: '50px', borderRadius: '6px'}} ref={ruleRef}>
                     

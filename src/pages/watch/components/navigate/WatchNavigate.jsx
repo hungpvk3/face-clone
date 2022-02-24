@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Setting, Book, Mark } from "../../../../components/icons";
+import { Setting, Mark } from "../../../../components/icons";
 
 const WatchNavigate = () => {
     return (
