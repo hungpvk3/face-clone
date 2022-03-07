@@ -11,7 +11,7 @@ const Preview = ({ruleValue, nameGroup}) => {
 
   // set height of preview
   useEffect(() => {
-    previewRef.current.style.height = '630px'
+    previewRef.current.style.height = `${(window.innerHeight - 160)}px`
     const handleRezise = () => {
       previewRef.current.style.height = `${(window.innerHeight - 160)}px`
       console.log((window.innerHeight - 100));

@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react'
 
-import "./Video.scss";
-import Video from "../../components/video";
+import { Mark } from "../../../../components/icons";
 
-const VideoPage = () => {
-    return (
-        <div className="p-video-container flex flex-col gap-5">
-            <div className="my-3">
+const WatchContent = () => {
+  return (
+    <div className="my-3">
         <div className="flex items-center gap-3 p-2 rounded-md mt-2 mx-2 cursor-pointer hover:bg-blue-50 ">
         <div className="h-9 w-9 rounded-full bg-blue-500 flex items-center justify-center">
             <svg
@@ -25,19 +23,14 @@ const VideoPage = () => {
 
     <div className="flex items-center gap-3 p-2 bg-blue-50 rounded-md mt-2 mx-2 cursor-pointer">
         <div className="h-9 w-9 rounded-full bg-blue-500 flex items-center justify-center">
-            {/* <Mark css="stroke-blue-500 fill-white h-7 w-7" /> */}
+            <Mark css="stroke-blue-500 fill-white h-7 w-7" />
         </div>
         <h2 className="m-0" style={{ fontSize: "16px" }}>
             Đã lưu
         </h2>
     </div>
 </div>
-            <Video />
-            <Video />
-            <Video />
-            <Video />
-        </div>
-    );
-};
+  )
+}
 
-export default VideoPage;
+export default WatchContent

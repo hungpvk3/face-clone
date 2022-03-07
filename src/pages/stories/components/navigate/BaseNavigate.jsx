@@ -4,13 +4,13 @@ import { useLocation } from "react-router-dom";
 import logo from "../../../../assets/img/logo.png";
 import { X } from "../../../../components/icons";
 
-const BaseNavigte = ({ children }) => {
+const BaseNavigte = ({ css, children }) => {
     let location = useLocation();
     let path = location.pathname.split("/")[2];
     console.log(path);
     return (
         <div
-            className={`hidden lg:block sticky top-0`}
+            className={`${css} sticky top-0`}
             style={{
             
                 width: "360px",

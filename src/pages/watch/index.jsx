@@ -8,7 +8,7 @@ import WatchNavigate from "./components/navigate/WatchNavigate";
 const WatchPage = () => {
     return (
         <div className="watch-container flex">
-            <BaseNavigate>
+            <BaseNavigate css="hidden lg:block">
                 <WatchNavigate />
             </BaseNavigate>
 
