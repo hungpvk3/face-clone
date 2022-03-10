@@ -1,0 +1,87 @@
+@import "../../../assets//style//variable";
+
+@mixin button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 0.5rem;
+    padding: 0.45rem 2rem;
+    background: $bg-color;
+    border-radius: 8px;
+
+    &:hover {
+        background: $icon-color;
+    }
+}
+
+.group-main {
+    &-thumnail {
+        height: 12rem;
+    }
+
+    &-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &-me {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background: $blue-color;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: $white-color;
+
+        span {
+            cursor: pointer;
+        }
+
+        &:hover span {
+            text-decoration: underline;
+            text-decoration-color: $text-color;
+        }
+    }
+
+    &-container {
+        padding: 0 1rem;
+    }
+
+    &-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+    }
+
+    &-status {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        gap: 0 0.3rem;
+
+        &-desc {
+            font-size: 1rem;
+        }
+
+        &-members {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    &-actions {
+        display: flex;
+        align-items: center;
+        gap: 0 0.8rem;
+        margin: 1rem 0;
+    }
+
+    &-enjoy {
+        @include button;
+        flex: 1;
+    }
+
+    &-invite {
+        @include button;
+    }
+}

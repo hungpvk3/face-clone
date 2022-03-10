@@ -6,7 +6,7 @@ import { Setting, Book, Plus } from "../../../../components/icons";
 const NavigateMain = () => {
     return (
         <div className="">
-            <div className="flex justify-between items-center px-4 mt-4">
+            <div className="flex justify-between items-center px-4 pt-4">
                 <h2 className="text-2xl font-bold m-0">Tin</h2>
                 <div className="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300">
                     <Setting css="w-6 h-6" />

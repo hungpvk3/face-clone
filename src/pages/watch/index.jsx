@@ -12,7 +12,7 @@ const WatchPage = () => {
                 <WatchNavigate />
             </BaseNavigate>
 
-            <div className="pt-14 w-full">
+            <div className="w-full">
                 <Outlet />
             </div>
         </div>

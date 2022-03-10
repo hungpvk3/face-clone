@@ -1,6 +1,5 @@
 import React from "react";
 
-import Header from "../../../components/header";
 import BaseNavigate from "../components/navigate/BaseNavigate";
 import NavigateMain from "../components/navigate/NavigateMain";
 import Stories from "../components/StoriesItem";
@@ -12,8 +11,6 @@ import stories4 from "../../../assets/img/stories4.jpg";
 const ListStories = () => {
     return (
         <div className="">
-            <Header />
-
             <div className="flex">
                 <div>
                     <BaseNavigate>

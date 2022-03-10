@@ -18,7 +18,19 @@
         height: 2.5rem;
         width: 2.5rem;
         border-radius: 100rem;
-        margin-top: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    &-home {
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        background: $icon-color;
+        border-radius: 100rem;
+        cursor: pointer;
     }
 
     &-search {

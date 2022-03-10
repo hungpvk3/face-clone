@@ -4,7 +4,6 @@
     &-wrapper {
         width: 100%;
         background-color: $bg-color;
-        padding-top: 56px;
         display: flex;
     }
 
@@ -19,8 +18,8 @@
         flex-basis: 23%;
         position: sticky;
         position: -webkit-sticky;
-        top: 56px;
-        height: calc(100vh - 56px);
+        top: 18px;
+        height: calc(100vh - 18px);
         overflow-y: scroll;
     }
 
@@ -48,8 +47,8 @@
         flex-basis: 23%;
         position: sticky;
         position: -webkit-sticky;
-        top: 56px;
-        height: calc(100vh - 56px);
+        top: 18px;
+        height: calc(100vh - 18px);
         overflow-y: scroll;
     }
 
