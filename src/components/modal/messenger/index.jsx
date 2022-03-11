@@ -1,17 +1,16 @@
 import React from "react";
+
+import "./MessengerModal.scss";
 import avatar from "../../../assets/img/stories1.jpg";
 import MessengerItem from "./MessengerItem";
 import { Zoom } from "../../icons";
 
-import "./MessengerModal.scss";
-
-const Messenger = ({ isOpen, elm }) => {
+const Messenger = ({ isOpen, onOpenMesModal }) => {
     return (
         <div
-            ref={elm}
             className={`${
                 isOpen ? null : "hidden"
-            } messenger absolute top-14 right-10 bg-white rounded-md shadow-md border p-3`}
+            } messenger absolute left-16 top-10 bg-white rounded-md shadow-md border p-3`}
             style={{ height: "90vh", width: "360px", overflowY: "scroll" }}
         >
             <div className="">
@@ -64,22 +63,8 @@ const Messenger = ({ isOpen, elm }) => {
             </div>
             <div
                 className="flex flex-col gap-3 mt-3"
-                onClick={() => console.log("click")}
             >
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
-                <MessengerItem avatar={avatar} />
+                <MessengerItem avatar={avatar} onOpenMesModal={onOpenMesModal} />
             </div>
         </div>
     );

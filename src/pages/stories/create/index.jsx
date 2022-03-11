@@ -38,7 +38,7 @@ const CreateStorie = () => {
         setTextStories(e.target.value);
     };
     return (
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row">
             <NavigateStories
                 onConfirm={handleOk}
                 onTextChange={handleTextStoriesChange}

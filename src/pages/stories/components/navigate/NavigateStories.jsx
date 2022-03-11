@@ -16,7 +16,7 @@ const Stories = ({ onConfirm, onSave, onTextChange, onGetImage }) => {
     };
 
     return (
-        <BaseNavigte>
+        <BaseNavigte css="hidden lg:block">
             <div className="mt-5 border-b" style={{ padding: "0 16px" }}>
                 <div className="flex justify-between items-center">
                     <h2 className="text-2xl font-bold m-0">Tin của bạn</h2>

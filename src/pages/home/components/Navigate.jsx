@@ -30,10 +30,10 @@ const Navition = () => {
                     <img src={friends} alt="" />
                     <span>Bạn bè</span>
                 </li>
-                <li className="navigate-home-item">
+                <Link to="/groups/feel" className="navigate-home-item">
                     <img src={group} alt="" />
                     <span>Nhóm</span>
-                </li>
+                </Link>
                 <li className="navigate-home-item">
                     <img src={messenger} alt="" />
                     <span>Messenger</span>
@@ -44,10 +44,10 @@ const Navition = () => {
                             <img src={market} alt="" />
                             <span>Marketplace</span>
                         </li>
-                        <li className="navigate-home-item">
+                        <Link to="../watch" className="navigate-home-item">
                             <img src={watch} alt="" />
                             <span>Watch</span>
-                        </li>
+                        </Link>
                     </>
                 ) : (
                     ""

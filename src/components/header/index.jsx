@@ -2,18 +2,19 @@ import React, { useEffect, useState, useRef } from "react";
 import { useLocation, Link } from "react-router-dom";
 
 import "./header.scss";
-import { MesIcon, Bell } from "../icons";
+import { MesIcon, Bell, Menu } from "../icons";
 import MessengerModal from "../modal/messenger";
+import MesModal from "../../pages/messenger/modal";
 
 const Header = () => {
     const [isMessenger, setIsMessenger] = useState(false);
+    const [mesModal, setMesModal] = useState(false);
     // const [isNotify, setIsNotify] = useState(false);
-    const elmRef = useRef(null);
-    const elmRef1 = useRef(null);
-
+    const elmRef = useRef();
+    console.log(isMessenger);
     let location = useLocation();
     let path = location.pathname.split("/")[1];
-
+    
     useEffect(() => {
         /**
          * Alert if clicked on outside of element
@@ -21,9 +22,7 @@ const Header = () => {
         function handleClickOutside(event) {
             if (
                 elmRef.current &&
-                !elmRef.current.contains(event.target) &&
-                elmRef1.current &&
-                !elmRef1.current.contains(event.target)
+                !elmRef.current.contains(event.target)
             ) {
                 setIsMessenger(false);
             }
@@ -35,7 +34,15 @@ const Header = () => {
             // Unbind the event listener on clean up
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [elmRef, elmRef1]);
+    }, [elmRef]);
+
+    const handleCloseMesModal = () => {
+        setMesModal(false);
+    };
+
+    const handleOpenMesModal = () => {
+        setMesModal(true);
+    };
 
     return (
         <div className="header-container">
@@ -55,8 +62,8 @@ const Header = () => {
                             y2="0%"
                             id="jsc_c_1m"
                         >
-                            <stop offset="0%" stop-color="#0062E0"></stop>
-                            <stop offset="100%" stop-color="#19AFFF"></stop>
+                            <stop offset="0%" stopColor="#0062E0"></stop>
+                            <stop offset="100%" stopColor="#19AFFF"></stop>
                         </linearGradient>
                     </defs>
                     <path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"></path>
@@ -67,7 +74,7 @@ const Header = () => {
                 </svg>
             </div>
 
-            <div className="header-home">
+            <Link to="/" className={`header-home text-gray-600 hover:text-gray-600 ${path === '' ? 'text-blue-600' : ''}`}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -76,7 +83,7 @@ const Header = () => {
                 >
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                 </svg>
-            </div>
+            </Link>
 
             <div className="header-search">
                 <svg
@@ -102,19 +109,16 @@ const Header = () => {
                     </div>
                     {/* <Notify isOpen={isNotify} /> */}
                 </li>
-                <li ref={elmRef1} className="header-noti-item">
-                    <div
-                        onClick={() => {
-                            setIsMessenger((prev) => !prev);
-                        }}
-                    >
+                <li ref={elmRef} className="header-noti-item" 
+                    onClick={() => setIsMessenger(true)}>
+                    <div>
                         <MesIcon
                             css={`
                                 ${isMessenger ? "fill-blue-600" : ""}
                             `}
                         />
                     </div>
-                    <MessengerModal isOpen={isMessenger} elm={elmRef} />
+                    <MessengerModal isOpen={isMessenger} elm={elmRef} onOpenMesModal={handleOpenMesModal} />
                 </li>
                 <li className="header-noti-item">
                     <svg
@@ -134,6 +138,9 @@ const Header = () => {
                         <circle cx="37" cy="37" r="6"></circle>
                     </svg>
                 </li>
+                <Link to="/bookmarks" className="header-noti-item header-noti-hidden">
+                    <Menu css={`h-6 w-6 ${path === 'bookmarks' ? 'text-blue-500' : 'text-black'}`} />
+                </Link>
             </ul>
 
             <div className="header-line"></div>
@@ -168,6 +175,7 @@ const Header = () => {
                     className="header-info-avatar object-cover"
                 />
             </div>
+            <MesModal isOpen={mesModal} onCloseMesModal={handleCloseMesModal} />
         </div>
     );
 };

@@ -1,28 +1,23 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import PropTypes from 'prop-types';
 
-import logo from "../../../../assets/img/logo.png";
 import { X } from "../../../../components/icons";
 
-const BaseNavigte = ({ css, children }) => {
+const BaseNavigte = ({ css, style, children }) => {
     let location = useLocation();
     let path = location.pathname.split("/")[1];
     console.log(path);
     return (
         <div
-            className={`${css} sticky top-0`}
+            className={`lg:sticky lg:top-0 lg:w-[360px] lg:h-[100vh] bg-white ${css}`}
             style={{
-                width: "360px",
-                minWidth: "360px",
-                backgroundColor: "white",
-                height: "100vh",
                 boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.2)",
             }}
         >
             {path === "stories" || path === "my" ? (
                 <div
-                    style={{ height: "56px", padding: "0 16px" }}
-                    className="flex items-center gap-2 shadow"
+                    className="flex items-center gap-2 shadow h-[56px] px-[16px]"
                 >
                     <div className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center">
                         <X css="h-6 w-6" color="white" />
@@ -34,5 +29,11 @@ const BaseNavigte = ({ css, children }) => {
         </div>
     );
 };
+
+BaseNavigte.propTypes = {
+    css: PropTypes.string,
+    children: PropTypes.element,
+    style: PropTypes.string
+}
 
 export default BaseNavigte;

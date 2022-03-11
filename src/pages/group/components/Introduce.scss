@@ -1,0 +1,44 @@
+@import '../../../assets/style/variable';
+
+.group-intro {
+    &-container {
+        position: sticky;
+        top: 80px;
+        width: 100%;
+        background: $white-color;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgb(0 0 0 / 10%);
+        padding: .5rem 1rem;
+    }
+
+    &-title {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    &-desc {
+        font-style: 1rem;
+        font-weight: 400;
+    }
+
+    &-info {
+        &-item {
+            display: flex;
+            gap: 0 .3rem;
+            margin-top: 1rem;
+
+            h1 {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &-button {
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 0.3rem 1rem;
+        border-radius: 8px;
+        background-color: $icon-color;
+    }
+}

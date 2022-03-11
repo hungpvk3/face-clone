@@ -14,7 +14,7 @@ const Page = () => {
     return (
         <div className="" style={{ fontFamily: "Segoe UI Historic" }}>
             {page === "hungpv" ? (
-                <div>
+                <div className="">
                     <div className="w-full h-max bg-white shadow">
                         <ThumbNail />
                     </div>

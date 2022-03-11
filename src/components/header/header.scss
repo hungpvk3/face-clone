@@ -60,6 +60,10 @@
             background: $icon-color;
             cursor: pointer;
         }
+
+        &-hidden {
+            display: none;
+        }
     }
 
     &-line {
@@ -106,5 +110,11 @@
         overflow: hidden;
         border: 1px solid $icon-color;
         cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .header-noti-hidden {
+        display: flex;
     }
 }

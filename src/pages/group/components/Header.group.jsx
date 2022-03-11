@@ -5,10 +5,10 @@ import "./Header.group.scss";
 const Header = () => {
     return (
         <div className="header-group">
-            <div className="header-group-conversation">
+            <div className="header-group-conversation hover:bg-blue-100 cursor-pointer">
                 <span>Thảo luận</span>
             </div>
-            <div className="header-group-search">
+            <div className="header-group-search hover:bg-gray-200 cursor-pointer">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"

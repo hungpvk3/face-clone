@@ -1,76 +1,97 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 import BaseNavigate from "../components/navigate/BaseNavigate";
 import NavigateMain from "../components/navigate/NavigateMain";
 import Stories from "../components/StoriesItem";
-import stories1 from "../../../assets/img/stories1.jpg";
-import stories2 from "../../../assets/img/stories2.jpg";
-import stories3 from "../../../assets/img/stories3.jpg";
-import stories4 from "../../../assets/img/stories4.jpg";
 
 const ListStories = () => {
     return (
         <div className="">
             <div className="flex">
                 <div>
-                    <BaseNavigate>
+                    <BaseNavigate css="hidden lg:block">
                         <NavigateMain />
                     </BaseNavigate>
                 </div>
 
-                <div className="w-full pt-20">
+
+                <div className="w-full lg:pt-20"  
+                    style={{
+                        maxWidth: "930px",
+                        margin: "0 auto",
+                        padding: "0 26px",
+                    }}>
+                    <div className="my-5 p-2 flex gap-3 items-center bg-white rounded-lg lg:hidden">
+                        <button className="flex-1 py-2 px-4 rounded-lg bg-gray-50 cursor-pointer hover:bg-gray-100">All stories</button>
+                        <Link to="my" className="flex-1 py-2 px-4 rounded-lg text-center text-black bg-gray-50 cursor-pointer hover:bg-gray-100 hover:text-black">Create stories</Link>
+                    </div>
+
                     <div
-                        className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4"
-                        style={{
-                            maxWidth: "930px",
-                            margin: "0 auto",
-                            padding: "0 26px",
-                        }}
+                        className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4"
                     >
                         <Stories
                             imgStory={
-                                "https://topshare.vn/wp-content/uploads/2021/10/hinh-anh-anime-ngau-va-cute-18.jpg"
+                                'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'
                             }
                             displayName={"Phạm văn hùng"}
-                            avatar={stories1}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             active
                         />
                         <Stories
                             imgStory={
-                                "https://hinhnen123.com/wp-content/uploads/2021/06/hinh-anh-anime-nu-18.jpg"
+                                'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'
                             }
                             displayName={"Bảo Boss"}
-                            avatar={stories2}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             active
                         />
                         <Stories
                             imgStory={
-                                "https://mister-map.com/wp-content/uploads/2021/11/game-anime-1.jpg"
+                                'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'
                             }
                             displayName={"Trần tranh tùng"}
-                            avatar={stories3}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             active
                         />
                         <Stories
                             imgStory={
-                                "https://i.pinimg.com/736x/c4/95/4c/c4954cf2777ba898de11a07a920e3ec7--black-bikini-anime-images.jpg"
+                                "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
                             }
                             displayName={"Nguyễn mạnh công"}
-                            avatar={stories4}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             active
                         />
                         <Stories
                             imgStory={
-                                "https://cf.shopee.vn/file/e3e377e3dd7091a882bd02c11f39940c"
+                                'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'
                             }
                             displayName={"Nguyễn mạnh công"}
-                            avatar={stories4}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             active
                         />
                         <Stories
-                            imgStory={stories4}
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             displayName={"Nguyễn mạnh công"}
-                            avatar={stories4}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                            active
+                        />
+                        <Stories
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                            displayName={"Nguyễn mạnh công"}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                            active
+                        />
+                        <Stories
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                            displayName={"Nguyễn mạnh công"}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                            active
+                        />
+                        <Stories
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                            displayName={"Nguyễn mạnh công"}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             active
                         />
                     </div>

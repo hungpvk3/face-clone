@@ -6,7 +6,7 @@ import WatchContent from "../content__navigate/WatchContent";
 const WatchNavigate = () => {
     return (
         <div>
-            <div>
+            <div className="">
                 <div className="flex justify-between items-center px-4 mt-3">
                     <h2 className="text-2xl font-bold m-0">Watch</h2>
                     <div className="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300">

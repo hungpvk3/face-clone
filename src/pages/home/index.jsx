@@ -9,9 +9,6 @@ import PostItem from "../../components/post";
 import { ArowRight } from "../../components/icons";
 
 import stories1 from "../../assets/img/crypto.jpg";
-import stories2 from "../../assets/img/stories2.jpg";
-import stories3 from "../../assets/img/stories3.jpg";
-import stories4 from "../../assets/img/stories4.jpg";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -22,35 +19,37 @@ const HomePage = () => {
                     <Navigate />
                 </div>
                 <div className="home-main">
-                    <div className="home-stories relative">
+                    <div className="relative grid grid-cols-4 gap-1 sm:grid-cols-5 sm:gap-2">
                         <Stories
-                            imgStory={stories1}
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             displayName={"Phạm văn hùng"}
-                            avatar={stories1}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                         />
                         <Stories
-                            imgStory={stories2}
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             displayName={"Bảo Boss"}
-                            avatar={stories2}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                         />
                         <Stories
-                            imgStory={stories3}
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             displayName={"Trần tranh tùng"}
-                            avatar={stories3}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                         />
                         <Stories
-                            imgStory={stories4}
+                            imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                             displayName={"Nguyễn mạnh công"}
-                            avatar={stories4}
+                            avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                         />
-                        <Stories
-                            imgStory={stories4}
-                            displayName={"Nguyễn mạnh công"}
-                            avatar={stories4}
-                        />
+                        <div className="hidden sm:block"> 
+                            <Stories
+                                imgStory={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                                displayName={"Nguyễn mạnh công"}
+                                avatar={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
+                            />
+                        </div>
                         <Link
                             to="stories"
-                            className="arow-right absolute -right-5 border shadow w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer hover:bg-gray-100"
+                            className="arow-right absolute -right-5 top-1/2 -translate-y-1/2 border shadow w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer hover:bg-gray-100"
                         >
                             <ArowRight css="text-gray-600 w-5 h-5" />
                             <span
@@ -71,7 +70,7 @@ const HomePage = () => {
                     </div>
                     <div className="home-posts">
                         <PostItem imgPost={stories1} link={1} />
-                        <PostItem imgPost={stories2} link={2} />
+                        <PostItem imgPost={stories1} link={2} />
                         <PostItem imgPost={stories1} link={3} />
                     </div>
                 </div>

@@ -5,11 +5,14 @@ import "./Group.main.scss";
 import { Plus, Group, Lock } from "../../../components/icons";
 import Header from "../components/Header.group";
 import BaseNavigate from "../../stories/components/navigate/BaseNavigate";
+import CreatePost from '../../home/components/CreatePost';
+import Introduce from '../components/Introduce';
+import PostItem from '../../../components/post'
 
 const GroupMain = () => {
     return (
-        <div className="flex w-full">
-            <BaseNavigate>
+        <div className="flex flex-col w-full lg:flex-row">
+            <BaseNavigate css="w-[100%] h-[100%] relative">
                 <div className="group-main-navigate">
                     <div className="group-main-thumnail">
                         <img
@@ -45,6 +48,8 @@ const GroupMain = () => {
                             <Avatar>H</Avatar>
                             <Avatar>H</Avatar>
                             <Avatar>H</Avatar>
+                            <Avatar>H</Avatar>
+                            <Avatar>H</Avatar>
                         </Avatar.Group>
                         <div className="group-main-actions">
                             <button className="group-main-enjoy">
@@ -61,6 +66,17 @@ const GroupMain = () => {
             </BaseNavigate>
             <div className="w-full">
                 <Header />
+                
+                <div className="flex flex-col-reverse lg:px-14 xl:grid grid-cols-5 gap-3 mt-3">
+                    <div className="col-span-3">
+                        <CreatePost />
+                        <PostItem imgPost={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'} />
+                        <PostItem imgPost={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'} />
+                    </div>
+                    <div className="col-span-2">
+                        <Introduce />
+                    </div>
+                </div>
             </div>
         </div>
     );

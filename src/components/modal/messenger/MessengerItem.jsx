@@ -1,10 +1,11 @@
-import React from "react";
+import React from "react"
+import PropTypes from 'prop-types'
 
 import { Avatar } from "../../icons";
 
-const MesgerItem = ({ avatar }) => {
+const MesgerItem = ({ avatar, onOpenMesModal }) => {
     return (
-        <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md">
+        <div className="flex items-center gap-3 hover:bg-gray-100 p-2 rounded-md" onClick={onOpenMesModal} >
             <Avatar
                 avatar={avatar}
                 css="h-12 w-12"
@@ -25,5 +26,10 @@ const MesgerItem = ({ avatar }) => {
         </div>
     );
 };
+
+MesgerItem.propTypes = {
+    avatar: PropTypes.string,
+    onOpenMesModal: PropTypes.func
+}
 
 export default MesgerItem;
