@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
+
 import { UserModel } from "../../models/user";
 
 const Otp = () => {
+  const navigate = useNavigate()
   const [timer, setTimer] = useState(60);
   const [refresh, setRefresh] = useState(false);
   const [otp, setOtp] = useState({
@@ -24,7 +27,11 @@ const Otp = () => {
   const handleVerifyOTP = async () => {
     const response = await UserModel.verifyOTP(otp);
 
-    console.log(response);
+    if (response.success) {
+      localStorage.setItem("token", response.tokenRes);
+      localStorage.setItem("userId", response.data._id);
+      navigate('/')
+    }
   };
 
   const handleRefreshOTP = async () => {

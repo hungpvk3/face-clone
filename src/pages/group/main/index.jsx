@@ -16,7 +16,7 @@ const GroupMain = () => {
                 <div className="group-main-navigate">
                     <div className="group-main-thumnail">
                         <img
-                            src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/270065160_2470177593116127_4881443151514239092_n.jpg?stp=dst-jpg_s960x960&_nc_cat=1&ccb=1-5&_nc_sid=8631f5&_nc_ohc=d0mJ1brdi2kAX9SDV-J&_nc_ht=scontent.fhan2-3.fna&oh=00_AT-2BCS3J-HKAdj0DENwiS48BCIJ-XHg6tobOwWiabDyKQ&oe=622DAE1A"
+                            srcSet="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/270065160_2470177593116127_4881443151514239092_n.jpg?stp=dst-jpg_s960x960&_nc_cat=1&ccb=1-5&_nc_sid=8631f5&_nc_ohc=d0mJ1brdi2kAX9SDV-J&_nc_ht=scontent.fhan2-3.fna&oh=00_AT-2BCS3J-HKAdj0DENwiS48BCIJ-XHg6tobOwWiabDyKQ&oe=622DAE1A 2x"
                             alt=""
                             className="group-main-image"
                         />

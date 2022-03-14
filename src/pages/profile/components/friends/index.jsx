@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Friends.scss";
 
 const Friends = () => {
+  const heightRef = useRef();
+
+  useEffect(() => {
+    heightRef.current.style.height = `${heightRef.current.clientWidth}px`;
+    const handleRezise = () => {
+      heightRef.current.style.height = `${heightRef.current.clientWidth}px`;
+    };
+
+    window.addEventListener("resize", handleRezise);
+
+    return () => window.removeEventListener("resize", handleRezise);
+  }, []);
+
   return (
     <div className="profile-friend-container">
       <div className="profile-friend-heading">
@@ -13,7 +26,7 @@ const Friends = () => {
       </div>
 
       <ul className="profile-friend-list">
-        <li className="profile-friend-item">
+        <li className="profile-friend-item" ref={heightRef}>
           <img
             src={
               "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
@@ -22,77 +35,6 @@ const Friends = () => {
           />
 
           <span>Bảo Boss</span>
-        </li>
-        <li className="profile-friend-item">
-          <img
-            src={
-              "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
-            }
-            alt=""
-          />
-
-          <span>Trần Thanh Tùng</span>
-        </li>
-
-        <li className="profile-friend-item">
-          <img
-            src={
-              "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
-            }
-            alt=""
-          />
-
-          <span>Trần Thanh Tùng</span>
-        </li>
-        <li className="profile-friend-item">
-          <img
-            src={
-              "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
-            }
-            alt=""
-          />
-
-          <span>Trần Thanh Tùng</span>
-        </li>
-        <li className="profile-friend-item">
-          <img
-            src={
-              "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
-            }
-            alt=""
-          />
-
-          <span>Trần Thanh Tùng</span>
-        </li>
-        <li className="profile-friend-item">
-          <img
-            src={
-              "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
-            }
-            alt=""
-          />
-
-          <span>Trần Thanh Tùng</span>
-        </li>
-        <li className="profile-friend-item">
-          <img
-            src={
-              "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
-            }
-            alt=""
-          />
-
-          <span>Trần Thanh Tùng</span>
-        </li>
-        <li className="profile-friend-item">
-          <img
-            src={
-              "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
-            }
-            alt=""
-          />
-
-          <span>Trần Thanh Tùng</span>
         </li>
       </ul>
     </div>

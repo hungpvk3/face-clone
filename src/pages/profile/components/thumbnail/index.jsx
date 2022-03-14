@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import "./ThumbNail.scss";
 import crypto from "../../../../assets/img/crypto.jpg";
 import History from "./History";
 import { useStore } from "../../../../store";
 
-const Thumb = () => {
+const Thumb = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { setIsOpenBanner, setIsOpenChoseImage } = useStore();
 
@@ -28,9 +29,10 @@ const Thumb = () => {
           <div className="thumb-avatar">
             <img
               src={
-                "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToplStyx8pu0DsUkR-zSI6hAAN-vzcrZF0HA&usqp=CAU"
               }
               alt=""
+              className="object-contain"
             />
             <div className="thumb-avatar-btn" onClick={handleChoseImage}>
               <i
@@ -72,7 +74,7 @@ const Thumb = () => {
       </div>
       <div className="thumb-info">
         <div className="thumb-info-wrapper">
-          <h1>Phạm Hùng</h1>
+          <h1>{`${user?.firstName} ${user?.lastName}`}</h1>
           {isOpen ? (
             <History onClose={handleClose} />
           ) : (
@@ -82,6 +84,10 @@ const Thumb = () => {
       </div>
     </div>
   );
+};
+
+Thumb.ropTypes = {
+  user: PropTypes.object,
 };
 
 export default Thumb;

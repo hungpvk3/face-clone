@@ -38,17 +38,19 @@ instance.interceptors.response.use(
       originalRequest._retry = true;
 
       const refreshToken = await UserModel.refreshToken();
-      if (refreshToken.success) {
+      if (refreshToken.success && localStorage.getItem("refreshToken")) {
         localStorage.setItem("token", refreshToken.token);
         instance.defaults.headers.common["Authorization"] =
           "Bearer " + refreshToken.token;
+      } else {
+        localStorage.removeItem("refreshToken");
       }
       return instance(originalRequest);
     }
 
     // Config response return data
     if (error.response) {
-      return error.response.data;
+      return error.response;
     }
 
     return Promise.reject(error);
