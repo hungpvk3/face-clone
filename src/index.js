@@ -6,12 +6,12 @@ import Route from "./routes";
 import { ProviderApp } from "./store";
 
 ReactDOM.render(
-    <React.StrictMode>
-        <ProviderApp>
-            <Route />
-        </ProviderApp>
-    </React.StrictMode>,
-    document.getElementById("root")
+  <React.StrictMode>
+    <ProviderApp>
+      <Route />
+    </ProviderApp>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

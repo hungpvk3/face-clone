@@ -6,11 +6,11 @@ import { useStore } from "../../../../store";
 const datas = [
     {
         id: 1,
-        url: "https://i.pinimg.com/originals/e4/1d/7b/e41d7b1ec4c107a2df219b24e3e7eda4.png",
+        url: "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg",
     },
     {
         id: 2,
-        url: "https://i.pinimg.com/474x/30/75/3a/30753ab5fe7729f5fafa08745d800473.jpg",
+        url: "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg",
     },
 ];
 
@@ -84,7 +84,7 @@ const ContentAvatar = () => {
                     </div>
                     <div className="h-28 w-28 rounded overflow-hidden">
                         <img
-                            src="https://i.pinimg.com/474x/30/75/3a/30753ab5fe7729f5fafa08745d800473.jpg"
+                            src="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
                             alt=""
                             className="w-full h-full object-cover cursor-pointer hover:opacity-90"
                         />

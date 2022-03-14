@@ -18,7 +18,7 @@ const Image = () => {
                 <li className="c-profile-image-item">
                     <img
                         src={
-                            "https://i.pinimg.com/originals/57/6b/47/576b4778aafcd888eb888553637ee006.jpg"
+                            "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
                         }
                         alt=""
                     />

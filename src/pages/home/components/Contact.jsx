@@ -34,22 +34,11 @@ const Contact = () => {
                 <ul className="contact-list">
                     <ItemContact
                         avatar={
-                            "https://cdn.donmai.us/original/5a/76/__hk416_girls_frontline_drawn_by_hiromaster_sinta_jh__5a76b8687822e05471412babcea21512.png"
+                            "https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
                         }
                         displayName="Phạm văn hùng"
                     />
-                    <ItemContact
-                        avatar={
-                            "https://cdn.donmai.us/original/5a/76/__hk416_girls_frontline_drawn_by_hiromaster_sinta_jh__5a76b8687822e05471412babcea21512.png"
-                        }
-                        displayName="Phạm văn hùng"
-                    />
-                    <ItemContact
-                        avatar={
-                            "https://cdn.donmai.us/original/5a/76/__hk416_girls_frontline_drawn_by_hiromaster_sinta_jh__5a76b8687822e05471412babcea21512.png"
-                        }
-                        displayName="Phạm văn hùng"
-                    />
+                    
                 </ul>
             </div>
         </div>

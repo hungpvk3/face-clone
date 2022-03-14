@@ -49,7 +49,7 @@ const ProfilePage = () => {
     };
 
     return (
-        <div style={{ paddingTop: "56px" }}>
+        <div>
             <div>
                 <ThumbNail />
             </div>

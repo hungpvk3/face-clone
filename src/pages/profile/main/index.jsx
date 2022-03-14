@@ -46,10 +46,10 @@ const Main = () => {
                     </div>
 
                     <div className="profile-posts">
-                        <PostItem imgPost="https://cdn.donmai.us/original/b4/1b/__dunkerque_and_dunkerque_azur_lane_drawn_by_aliceblue__b41bb4c8005719ebaf76a8eca36344bc.png" />
-                        <PostItem imgPost="https://cdn.donmai.us/original/b4/1b/__dunkerque_and_dunkerque_azur_lane_drawn_by_aliceblue__b41bb4c8005719ebaf76a8eca36344bc.png" />
-                        <PostItem imgPost="https://cdn.donmai.us/original/b4/1b/__dunkerque_and_dunkerque_azur_lane_drawn_by_aliceblue__b41bb4c8005719ebaf76a8eca36344bc.png" />
-                        <PostItem imgPost="https://cdn.donmai.us/original/b4/1b/__dunkerque_and_dunkerque_azur_lane_drawn_by_aliceblue__b41bb4c8005719ebaf76a8eca36344bc.png" />
+                        <PostItem imgPost="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg" />
+                        <PostItem imgPost="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg" />
+                        <PostItem imgPost="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg" />
+                        <PostItem imgPost="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg" />
                     </div>
                 </div>
             </div>

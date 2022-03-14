@@ -27,7 +27,7 @@ const Stories = ({ onConfirm, onSave, onTextChange, onGetImage }) => {
                 <div className="flex items-center gap-2 py-6">
                     <Avatar
                         css="h-16 w-16"
-                        avatar="https://i.redd.it/omst81cg4oe41.jpg"
+                        avatar="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
                         cssActive="hidden"
                     />
                     <span className="text-lg font-semibold">Phạm văn hùng</span>

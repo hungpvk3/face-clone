@@ -10,7 +10,7 @@ const FriendItem = () => {
                 <div className="w-20 h-20 rounded-lg overflow-hidden border border-gray-200">
                     <img
                         className="w-full h-full object-cover"
-                        src="https://symbols.vn/wp-content/uploads/2021/12/Anh-Anime-nong-bong-vo-cung-hap-dan.jpg"
+                        src="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
                         alt=""
                     />
                 </div>

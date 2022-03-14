@@ -1,42 +1,11 @@
 import { useContext } from "react";
-import { ProviderContext } from ".";
+import ProviderContext from "./ContextClient";
 
-export const useStore = function () {
-    const {
-        isOpenEditProfile,
-        setIsOpenEditProfile,
-        isOpenChoseImage,
-        setIsOpenChoseImage,
-        avatar,
-        setAvatar,
-        isOpenUpdateAvatar,
-        setIsOpenUpdateAvatar,
-        avatarURL,
-        setAvatarURL,
-        isOpenBanner,
-        setIsOpenBanner,
-        isOpenEditDetail,
-        setIsOpenEditDetail,
-        storiesURL,
-        setStoriesURL,
-    } = useContext(ProviderContext);
+export const useStore = () => {
+  const { authState, dispatchAuth } = useContext(ProviderContext);
 
-    return {
-        isOpenEditProfile,
-        setIsOpenEditProfile,
-        isOpenChoseImage,
-        setIsOpenChoseImage,
-        avatar,
-        setAvatar,
-        isOpenUpdateAvatar,
-        setIsOpenUpdateAvatar,
-        avatarURL,
-        setAvatarURL,
-        isOpenBanner,
-        setIsOpenBanner,
-        isOpenEditDetail,
-        setIsOpenEditDetail,
-        storiesURL,
-        setStoriesURL,
-    };
+  return {
+    authState,
+    dispatchAuth,
+  };
 };

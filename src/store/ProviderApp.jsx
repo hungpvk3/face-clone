@@ -1,44 +1,21 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 
-import ProviderContext from "./Context";
+import authReducer, { initialAuth } from "./reducers/authReducer";
+import ProviderContext from "./ContextClient";
 
-const Provider = ({ children }) => {
-    const [isOpenEditProfile, setIsOpenEditProfile] = useState(false);
-    const [isOpenChoseImage, setIsOpenChoseImage] = useState(false);
-    const [isOpenUpdateAvatar, setIsOpenUpdateAvatar] = useState(false);
-    const [isOpenEditDetail, setIsOpenEditDetail] = useState(false);
-    const [isOpenBanner, setIsOpenBanner] = useState(false);
-    const [avatar, setAvatar] = useState("");
-    const [storiesURL, setStoriesURL] = useState({
-        storiesImage: "",
-        storiesText: "",
-    });
-    const [avatarURL, setAvatarURL] = useState("");
+const ProviderApp = ({ children }) => {
+  const [authState, dispatchAuth] = useReducer(authReducer, initialAuth);
 
-    return (
-        <ProviderContext.Provider
-            value={{
-                isOpenEditProfile,
-                setIsOpenEditProfile,
-                isOpenChoseImage,
-                setIsOpenChoseImage,
-                avatar,
-                setAvatar,
-                isOpenUpdateAvatar,
-                setIsOpenUpdateAvatar,
-                avatarURL,
-                setAvatarURL,
-                isOpenBanner,
-                setIsOpenBanner,
-                isOpenEditDetail,
-                setIsOpenEditDetail,
-                storiesURL,
-                setStoriesURL,
-            }}
-        >
-            {children}
-        </ProviderContext.Provider>
-    );
+  const providerAppData = {
+    authState,
+    dispatchAuth,
+  };
+
+  return (
+    <ProviderContext.Provider value={providerAppData}>
+      {children}
+    </ProviderContext.Provider>
+  );
 };
 
-export default Provider;
+export default ProviderApp;

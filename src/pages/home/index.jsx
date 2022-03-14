@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import "./Home.scss";
 import CreatePost from "./components/CreatePost";
@@ -7,11 +7,22 @@ import Contact from "./components/Contact";
 import Stories from "../stories/components/StoriesItem";
 import PostItem from "../../components/post";
 import { ArowRight } from "../../components/icons";
+import {UserModel} from '../../models/user'
 
 import stories1 from "../../assets/img/crypto.jpg";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
+    useEffect(() => {
+        const handleGetUser = async () => {
+          const response = await UserModel.getUser();
+    
+          console.log(response);
+        };
+    
+        handleGetUser();
+      }, []);
+
     return (
         <div className="home-wrapper">
             <div className="home-container">

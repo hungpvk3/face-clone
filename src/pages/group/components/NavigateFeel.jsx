@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Setting, Plus } from "../../../components/icons";
-import image from "../../../assets/img/stories1.jpg";
 
 const NavigateFeel = () => {
     return (
@@ -63,7 +62,7 @@ const NavigateFeel = () => {
                     <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
                             <img
-                                src={image}
+                                src={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                                 alt=""
                                 className="h-full w-full object-cover"
                             />
@@ -76,7 +75,7 @@ const NavigateFeel = () => {
                     <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
                             <img
-                                src={image}
+                                src={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                                 alt=""
                                 className="h-full w-full object-cover"
                             />
@@ -102,7 +101,7 @@ const NavigateFeel = () => {
                     <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
                             <img
-                                src={image}
+                                src={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                                 alt=""
                                 className="h-full w-full object-cover"
                             />
@@ -115,7 +114,7 @@ const NavigateFeel = () => {
                     <div className="flex items-center gap-3 rounded-md w-full p-2 hover:bg-gray-100">
                         <div className="h-16 w-16 overflow-hidden border rounded-md">
                             <img
-                                src={image}
+                                src={'https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg'}
                                 alt=""
                                 className="h-full w-full object-cover"
                             />

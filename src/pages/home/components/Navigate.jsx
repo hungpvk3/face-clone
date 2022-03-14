@@ -20,7 +20,7 @@ const Navition = () => {
             <ul className="navigate-home-list">
                 <Link to="/profile" className="navigate-home-item">
                     <img
-                        src="https://cdn.donmai.us/original/5a/76/__hk416_girls_frontline_drawn_by_hiromaster_sinta_jh__5a76b8687822e05471412babcea21512.png"
+                        src="https://dulichviet247.com/wp-content/uploads/2017/11/anhr-cafe-sapa.jpg"
                         alt=""
                         className="navigate-home-avatar object-cover"
                     />

@@ -1,3 +1,4 @@
+import React from "react";
 import { useRoutes } from "react-router-dom";
 
 import MainEntry from "../pages/main";
@@ -7,7 +8,7 @@ import WatchPage from "../pages/watch";
 import GroupPage from "../pages/group";
 
 import Feel from "../pages/group/feel";
-import Group from '../pages/group/main'
+import Group from "../pages/group/main";
 import CreateGroupPage from "../pages/group/create";
 
 import ProfilePage from "../pages/profile";
@@ -29,112 +30,112 @@ import Page from "../pages/page";
 import VideoPage from "../pages/video";
 
 export default function MainRoutes() {
-    const elements = useRoutes([
+  const elements = useRoutes([
+    {
+      path: PATH.MAIN,
+      element: <MainEntry />,
+      children: [
         {
-            path: PATH.MAIN,
-            element: <MainEntry />,
-            children: [
-                {
-                    path: PATH.HOME,
-                    element: <HomePage />,
-                },
-                {
-                    path: PATH.PROFILE,
-                    element: <ProfilePage />,
-                    children: [
-                        {
-                            path: "",
-                            element: <MainFrofile />,
-                        },
-                        {
-                            path: "about",
-                            element: <AboutProfile />,
-                            children: [
-                                {
-                                    path: "",
-                                    element: <OverView />,
-                                },
-                                {
-                                    path: "work",
-                                    element: <WorkandEdu />,
-                                },
-                            ],
-                        },
-                        {
-                            path: "friends",
-                            element: <FriendProfile />,
-                        },
-                        {
-                            path: "images",
-                            element: <ImageProfile />,
-                        },
-                        {
-                            path: "groups",
-                            element: <GroupProfile />,
-                        },
-                    ],
-                },
-                {
-                    path: "bookmarks",
-                    element: <BookMarkPage />,
-                },
-                {
-                    path: "watch",
-                    element: <WatchPage />,
-                    children: [
-                        {
-                            path: "",
-                            element: <VideoPage />,
-                        },
-                        {
-                            path: ":page",
-                            element: <Page />,
-                        },
-                    ],
-                },
-                {
-                    path: "groups",
-                    element: <GroupPage />,
-                    children: [
-                        {
-                            path: "feel",
-                            element: <Feel />,
-                        },
-                        {
-                            path: 'create',
-                            element: <CreateGroupPage />
-                        },
-                        {
-                            path: ":groups",
-                            element: <Group />,
-                        }
-                    ]
-                }
-            ],
+          path: PATH.HOME,
+          element: <HomePage />,
         },
         {
-            path: "/stories",
-            element: <MainStories />,
-            children: [
+          path: PATH.PROFILE,
+          element: <ProfilePage />,
+          children: [
+            {
+              path: "",
+              element: <MainFrofile />,
+            },
+            {
+              path: "about",
+              element: <AboutProfile />,
+              children: [
                 {
-                    path: "",
-                    element: <ListStories />,
+                  path: "",
+                  element: <OverView />,
                 },
                 {
-                    path: "my",
-                    element: <CreateStories />,
+                  path: "work",
+                  element: <WorkandEdu />,
                 },
-            ],
+              ],
+            },
+            {
+              path: "friends",
+              element: <FriendProfile />,
+            },
+            {
+              path: "images",
+              element: <ImageProfile />,
+            },
+            {
+              path: "groups",
+              element: <GroupProfile />,
+            },
+          ],
         },
         {
-            path: "/:page",
-            element: <Page />,
+          path: "bookmarks",
+          element: <BookMarkPage />,
         },
         {
-            path: "*",
-            element: <NotFound />,
+          path: "watch",
+          element: <WatchPage />,
+          children: [
+            {
+              path: "",
+              element: <VideoPage />,
+            },
+            {
+              path: ":page",
+              element: <Page />,
+            },
+          ],
         },
-    ]);
+        {
+          path: "groups",
+          element: <GroupPage />,
+          children: [
+            {
+              path: "feel",
+              element: <Feel />,
+            },
+            {
+              path: "create",
+              element: <CreateGroupPage />,
+            },
+            {
+              path: ":groups",
+              element: <Group />,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      path: "/stories",
+      element: <MainStories />,
+      children: [
+        {
+          path: "",
+          element: <ListStories />,
+        },
+        {
+          path: "my",
+          element: <CreateStories />,
+        },
+      ],
+    },
+    {
+      path: "/:page",
+      element: <Page />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
 
-    return elements;
+  return elements;
 }
