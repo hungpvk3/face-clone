@@ -8,7 +8,7 @@ const BookMark = () => {
   const {
     authState: { user },
   } = useStore();
-  console.log(user);
+
   return (
     <div className="bookmarks-wrapper">
       <Navigate user={user} />
