@@ -24,7 +24,7 @@ const Navition = ({ user }) => {
           <Avatar src="" size={35}>
             {user?.firstName?.charAt(0)?.toUpperCase()}
           </Avatar>
-          <span>Phạm Hùng</span>
+          <span>{`${user.firstName} ${user.lastName}`}</span>
         </Link>
         <li className="navigate-home-item">
           <img src={friends} alt="" />

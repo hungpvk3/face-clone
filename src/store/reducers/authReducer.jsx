@@ -14,6 +14,7 @@ export default function authReducer(state, action) {
     case "USER_ACCESS":
       return {
         ...state,
+        isAuthenticated: true,
         user: action.payload,
       };
 

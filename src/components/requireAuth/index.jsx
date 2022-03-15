@@ -19,7 +19,7 @@ const ReqiureAuth = () => {
       if (token && refreshToken) {
         const response = await UserModel.getUser();
         console.log(response);
-        dispatchAuth({ type: "LOGIN_SUCCESS" });
+        // dispatchAuth({ type: "LOGIN_SUCCESS" });
         dispatchAuth({ type: "USER_ACCESS", payload: response.user });
         return true;
       } else {
