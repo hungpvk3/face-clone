@@ -5,6 +5,7 @@ import ProviderContext from "./ContextClient";
 
 const ProviderApp = ({ children }) => {
   const [authState, dispatchAuth] = useReducer(authReducer, initialAuth);
+  const [storiesURL, setStoriesURL] = useState("");
   const [isOpenEditProfile, setIsOpenEditProfile] = useState();
   const [isOpenChoseImage, setIsOpenChoseImage] = useState();
   const [isOpenUpdateAvatar, setIsOpenUpdateAvatar] = useState();
@@ -15,6 +16,8 @@ const ProviderApp = ({ children }) => {
   const providerAppData = {
     authState,
     dispatchAuth,
+    storiesURL,
+    setStoriesURL,
     isOpenEditProfile,
     setIsOpenEditProfile,
     isOpenChoseImage,

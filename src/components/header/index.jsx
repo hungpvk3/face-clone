@@ -7,6 +7,7 @@ import { useStore } from "../../store";
 import { MesIcon, Bell, Menu } from "../icons";
 import MessengerModal from "../modal/messenger";
 import MesModal from "../../pages/messenger/modal";
+import { SearchFriend } from "../SearchFriend";
 
 const Header = () => {
   const {
@@ -14,6 +15,7 @@ const Header = () => {
   } = useStore();
   const [isMessenger, setIsMessenger] = useState(false);
   const [mesModal, setMesModal] = useState(false);
+  const [isSearch, setIsSearch] = useState(false);
   // const [isNotify, setIsNotify] = useState(false);
   const elmRef = useRef();
   let location = useLocation();
@@ -44,6 +46,10 @@ const Header = () => {
   const handleOpenMesModal = () => {
     setMesModal(true);
   };
+
+  const handleOpenSearch = () => {
+
+  }
 
   return (
     <div className="header-container">
@@ -91,22 +97,7 @@ const Header = () => {
         </svg>
       </Link>
 
-      <div className="header-search">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
-      </div>
+      <SearchFriend />
 
       <ul className="header-noti">
         <li className="header-noti-item">

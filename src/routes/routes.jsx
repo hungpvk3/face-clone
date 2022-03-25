@@ -15,10 +15,12 @@ import ProfilePage from "../pages/profile";
 import MainFrofile from "../pages/profile/main";
 import FriendProfile from "../pages/profile/friend";
 import AboutProfile from "../pages/profile/about";
-import OverView from "../pages/profile/about/overview";
-import WorkandEdu from "../pages/profile/about/work";
 import ImageProfile from "../pages/profile/images";
 import GroupProfile from "../pages/profile/group";
+import OverView from "../pages/profile/about/overview";
+import WorkandEdu from "../pages/profile/about/work";
+import PlacesProfile from "../pages/profile/about/places";
+import ContactProfile from "../pages/profile/about/contact";
 
 import MainStories from "../pages/stories";
 import ListStories from "../pages/stories/main";
@@ -59,6 +61,14 @@ export default function MainRoutes() {
                   path: "work",
                   element: <WorkandEdu />,
                 },
+                {
+                  path: "places",
+                  element: <PlacesProfile />
+                },
+                {
+                  path: "contact",
+                  element: <ContactProfile/>
+                }
               ],
             },
             {

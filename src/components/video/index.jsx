@@ -126,7 +126,7 @@ const VideoItem = () => {
                 <video
                     ref={videoRef}
                     style={{ height: "100%" }}
-                    src={videoURL}
+                    src={"https://drive.google.com/uc?id=16K4yUtNqA7-RVL6q0SS7PySjbBVlTPJI&export=down"}
                 ></video>
                 <div className="video-controll absolute w-full bottom-0 z-59 flex items-center">
                     <div className="flex items-center">

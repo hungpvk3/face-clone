@@ -33,22 +33,24 @@ instance.interceptors.response.use(
     // Do something with response error
 
     // Refresh token when token expries
+    
     const originalRequest = error.config;
-    if (error.response.status === 400 && !originalRequest._retry) {
-      originalRequest._retry = true;
 
-      const refreshToken = await UserModel.refreshToken();
-      if (refreshToken.success && localStorage.getItem("refreshToken")) {
-        localStorage.setItem("token", refreshToken.token);
+    if (error.response.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true;
+      const refreshTokenRes = await UserModel.refreshToken();
+      
+      if (refreshTokenRes.success) {
         instance.defaults.headers.common["Authorization"] =
-          "Bearer " + refreshToken.token;
+          "Bearer " + refreshTokenRes.refreshToken;
+        localStorage.setItem("token", refreshTokenRes.accessToken);
+        return instance(originalRequest);
       } else {
+        instance.defaults.headers.common["Authorization"] = "Bearer " + null;
         localStorage.removeItem("refreshToken");
       }
-      return instance(originalRequest);
     }
 
-    // Config response return data
     if (error.response) {
       return error.response;
     }

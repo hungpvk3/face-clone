@@ -21,7 +21,7 @@ const UserModel = {
   refreshToken: async () => {
     const response = await AxiosClient.post("/refreshToken", {
       refreshToken: localStorage.getItem("refreshToken"),
-      userId: "622d7ba1620ff07c4f987a34",
+      userId: localStorage.getItem("id"),
     });
 
     return response;

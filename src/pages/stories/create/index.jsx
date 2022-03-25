@@ -17,12 +17,13 @@ const CreateStorie = () => {
     const [isConfirm, setIsConfirm] = useState(false);
     const [textStories, setTextStories] = useState("");
     const getImage = () => takeScreenshot(ref.current);
+    console.log(image);
     useEffect(() => {
         return () => {
             storiesURL.storiesImage &&
                 URL.revokeObjectURL(storiesURL.storiesImage);
         };
-    }, [storiesURL.storiesImage]);
+    }, [storiesURL?.storiesImage]);
     const handleTrashStories = () => {
         storiesURL.storiesImage && URL.revokeObjectURL(storiesURL.storiesImage);
         setStoriesURL({ storiesImage: "", storiesText: "" });

@@ -5,6 +5,8 @@ export const useStore = () => {
   const {
     authState,
     dispatchAuth,
+    storiesURL,
+    setStoriesURL,
     isOpenEditProfile,
     setIsOpenEditProfile,
     isOpenChoseImage,
@@ -22,6 +24,8 @@ export const useStore = () => {
   return {
     authState,
     dispatchAuth,
+    storiesURL,
+    setStoriesURL,
     isOpenEditProfile,
     setIsOpenEditProfile,
     isOpenChoseImage,

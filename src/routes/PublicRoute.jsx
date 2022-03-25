@@ -16,7 +16,7 @@ export default function PublicRoute() {
       element: <RegisterPage />,
     },
     {
-      path: "/opt",
+      path: "/otp",
       element: <VerifyOTP />,
     },
     {
